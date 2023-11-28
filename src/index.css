@@ -6,21 +6,38 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background-color: rgb(210, 243, 249);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
 }
 header {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  background-color: #171340;
+  background-color: #aeccd2;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
   color: #fff;
+  font-weight: bold;
   font-family: "McLaren", cursive;
-  font-weight: 200;
+  font-size: 25px;
+}
+header img {
+  width: 55px;
+  height: 55px;
+  padding-right: 20px;
+}
+.webName{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  
+
 }
 footer {
   position: absolute;
@@ -32,4 +49,42 @@ footer {
 
 footer p {
   color: #ccc;
+}
+/* .daytime {
+  background-image: url('../public/Images/day.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.nighttime {
+  background-image: url('../public/Images/night.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+} */
+
+h3, h4{
+  color: #3b5b62;
+}
+.container-next-days{
+  display: flex;
+  flex-direction: row;
+  
+
+  text-align: center;
+
+width: 20%;
+height: 100px;
+}
+.container-today{
+  text-align: center;
+  width: 60%;
+  height: 100px;
 }
