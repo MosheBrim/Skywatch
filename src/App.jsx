@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div className={`app ${isDaytime ? "daytime" : "nighttime"}`}>
-      <div id="root">
+      <div>
         <Header />
         <Footer />
         <div className="middle-container">
