@@ -17,15 +17,14 @@ function Header() {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures that the effect runs once on mount
+  }, []); 
 
   if (error) {
-    // Render error state
+    
     return <div>Error fetching location: {error}</div>;
   }
 
   if (!location) {
-    // Render loading state or placeholder while waiting for the location
     return <div>Loading...</div>;
   }
 
@@ -33,7 +32,7 @@ function Header() {
     <header>
       <div className="webName">
         <div>
-          <img src="../Images/weather_logo.png" alt="" />
+          <img src="../images/weather_logo.png" alt="" />
         </div>
         <div>
           <h1>Local Weather</h1>

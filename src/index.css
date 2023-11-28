@@ -11,12 +11,21 @@ body {
   background-size: cover;
   height: 100vh;
 }
+.app {
+}
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-color: #aeccd2;
+  text-shadow: 2px 2px 4px #3b5b62;
   padding: 16px 32px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -32,12 +41,10 @@ header img {
   height: 55px;
   padding-right: 20px;
 }
-.webName{
+.webName {
   display: flex;
   flex-direction: row;
   align-items: center;
-  
-
 }
 footer {
   position: absolute;
@@ -48,10 +55,10 @@ footer {
 }
 
 footer p {
-  color: #ccc;
+  color: #c9c7c7;
 }
 /* .daytime {
-  background-image: url('../public/Images/day.jpg');
+  background-image: url('../public/images/day.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,7 +68,7 @@ footer p {
 }
 
 .nighttime {
-  background-image: url('../public/Images/night.jpg');
+  background-image: url('../public/images/night.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -70,21 +77,59 @@ footer p {
   height: 100vh;
 } */
 
-h3, h4{
-  color: #3b5b62;
+h4,
+h5 {
+  color: white;
+  text-shadow: 2px 2px 2px #3b5b62;
+
 }
-.container-next-days{
+.container-next-days {
   display: flex;
   flex-direction: row;
-  
-
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
-width: 20%;
-height: 100px;
+  margin: 20px;
+  width: 800px;
+  height: 200px;
 }
-.container-today{
+.next-days {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  width: 60%;
-  height: 100px;
+  margin: 20px;
+  width: 240px;
+  height: 220px;
+  border-radius: 10px;
+  background-color: #aeccd2;
+}
+.container-today {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  width: 70%;
+  height: 220px;
+}
+.today {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #aeccd2;
+  width: 760px;
+  text-shadow: 2px 2px 4px #3b5b62;
+  margin: 10px 20px;
+  height: 220px;
+}
+.date{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

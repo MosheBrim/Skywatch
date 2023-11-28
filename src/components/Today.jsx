@@ -1,20 +1,32 @@
 import React from "react";
+import { useDayNight } from "../atoms/dayNightAtom";
 import { getWeatherPicture } from "../functions/weatherFunctions";
 
 const Today = (props) => {
+  const [isDaytime] = useDayNight();
+
   const { day, weatherCode, temperatureMax, temperatureMin } = props;
 
   return (
-    <div className="container-today">
-      <div>
-        <h3>{day}</h3>
-        <h3>{new Date().toLocaleDateString()}</h3>
+    <div className="today">
+      <div className="date">
+        <div>
+          <h4>{day}</h4>
+        </div>
+        <div>
+          <h4>{new Date().toLocaleDateString()}</h4>
+        </div>
       </div>
       <div>
-        <img src={`../Images/${getWeatherPicture(weatherCode)}`} alt="img-weather" />
+        <img
+          src={`../icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
+            weatherCode
+          )}`}
+          alt="img-weather"
+        />
       </div>
       <div>
-        <h4>{`${temperatureMin}° / ${temperatureMax}°`}</h4>
+        <h5>{`${temperatureMin}° / ${temperatureMax}°`}</h5>
       </div>
     </div>
   );
