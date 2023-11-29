@@ -33,7 +33,7 @@ header {
 header h1 {
   color: #fff;
   font-weight: bold;
-  font-family: 'Caveat', cursive;
+  font-family: "Caveat", cursive;
   font-size: 2em;
 }
 header img {
@@ -81,8 +81,7 @@ h4,
 h5 {
   color: white;
   text-shadow: 1px 1px 1px #5c9fae;
-  font-family: 'Dancing Script', cursive;
-
+  font-family: "Dancing Script", cursive;
 }
 .container-next-days {
   display: flex;
@@ -90,7 +89,7 @@ h5 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 20px;
+  margin: 30px;
   width: 800px;
   height: 200px;
 }
@@ -105,44 +104,52 @@ h5 {
   height: 220px;
   border-radius: 10px;
   background-color: #aeccd2;
-  &:hover{
-  }
-
 }
+
 .container-today {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  /* justify-content: center; */
+  /* text-align: center; */
   margin: 20px;
   width: 70%;
   height: 220px;
 }
 
 .today {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  justify-content: center;
-  text-align: center;
+  
   border-radius: 10px;
   background-color: #aeccd2;
   width: 760px;
   text-shadow: -1px -1px -1px #3b5b62;
-  margin: 10px 20px;
+  /* padding:  20px; */
+
   height: 220px;
-  /* box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.522); */
-
 }
-
-
+.inner-today{
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  text-align: center;
+  margin: 10px;
+  margin-top: 20px;
+  height: 100%;
+}
+.img-today{
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
 
 .date {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
-  align-items:self-start;
+  align-items: self-start;
   width: 210px;
 }
 
@@ -156,10 +163,13 @@ h5 {
 .inner-date h4 {
   font-size: 1em;
 }
+.today-date{
+  /* margin-left: 8px; */
+}
 
 .image {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -171,25 +181,21 @@ h5 {
   background-color: #aeccd2;
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-
 }
-.img{
+.img {
   width: 80px;
   height: 80px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
-
 }
-.temperature-min{
+.temperature-min {
   /* display:inline-block; */
   color: rgba(255, 255, 255, 0.782);
-
 }
-h5{
+h5 {
   padding: 5px;
-  display:inline;
-
+  display: inline;
 }
-span{
+span {
   background-color: rgb(75, 71, 104);
   height: 20px;
   width: 2px;

@@ -27,7 +27,7 @@ function Header() {
             <img src="../images/weather_logo.png" alt="" />
           </div>
           <div>
-            <h1>Local Weather</h1>
+            <h1>Weather</h1>
           </div>
         </div>
         <div>
@@ -45,7 +45,7 @@ function Header() {
             <img src="../images/weather_logo.png" alt="" />
           </div>
           <div>
-            <h1>Local Weather</h1>
+            <h1>Weather</h1>
           </div>
         </div>
         <div>
@@ -62,11 +62,11 @@ function Header() {
           <img src="../images/weather_logo.png" alt="" />
         </div>
         <div>
-          <h1>Local Weather</h1>
+          <h1>Weather</h1>
         </div>
       </div>
       <div>
-        <h1>{location.countryCapital}</h1>
+        <h1>{location.city}</h1>
       </div>
     </header>
   );

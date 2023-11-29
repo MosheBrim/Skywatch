@@ -53,7 +53,7 @@ const getWeather = async () => {
   try {
     const location = await getLocation();
     console.log(location);
-    const url = `https://api.open-meteo.com/v1/forecast?latitude=${location.latitude}&longitude=${location.longitude}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Africa%2FCairo&forecast_days=4`;
+    const url = `https://api.open-meteo.com/v1/dwd-icon?latitude=${location.latitude}&longitude=${location.longitude}&current=temperature_2m,relative_humidity_2m,precipitation,rain,wind_speed_10m,wind_direction_10m&daily=weathercode,temperature_2m_max,temperature_2m_min&forecast_days=4`;
     const responseWeather = await fetch(url);
     const dataWeather = await responseWeather.json();
 

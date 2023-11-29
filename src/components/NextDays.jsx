@@ -11,7 +11,6 @@ const NextDays = (props) => {
           <h4>{props.day}</h4>
         </div>
         <div className="inner-date">
-          {" "}
           <h4>{props.date}</h4>
         </div>
       </div>
