@@ -9,7 +9,7 @@ import { getDayOfWeek, getWeather } from "./functions/weatherFunctions";
 const App = () => {
   const [isDaytime] = useDayNight();
   const [weatherData, setWeatherData] = useState({
-    weatherCode: [100, 100, 100, 100],
+    weatherCode: [10, 10, 10, 10],
     temperatureMax: [0, 0, 0, 0],
     temperatureMin: [0, 0, 0, 0],
   });

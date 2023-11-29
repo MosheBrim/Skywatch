@@ -2,7 +2,7 @@ import getLocation from "./locationFunction";
 
 const getWeatherPicture = (weatherCode) => {
   const picture = {
-    100 :"image-loader.gif",
+    10: "image-loader.gif",
     0: "clear.svg",
     1: "cloudy.svg",
     2: "cloudy-2.svg",
@@ -32,8 +32,7 @@ const getWeatherPicture = (weatherCode) => {
     96: "stormy.svg",
     99: "stormy.svg",
   };
-
-  return picture[weatherCode] || "default.svg";
+  return picture[weatherCode] || "image-loader.gif";
 };
 
 const getDayOfWeek = (dayIndex) => {
@@ -67,7 +66,7 @@ const getWeather = async () => {
   } catch (error) {
     console.error("Error fetching weather data:", error.message);
     return {
-      weatherCode: [100, 100, 100, 100],
+      weatherCode: [10, 10, 10, 10],
       temperatureMax: [0, 0, 0, 0],
       temperatureMin: [0, 0, 0, 0],
     };
