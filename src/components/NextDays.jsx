@@ -17,7 +17,7 @@ const NextDays = (props) => {
       <div className="image">
         <img
         className="iag"
-          src={`../icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
+          src={`${import.meta.env.BASE_URL}/icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
             props.weatherCode
           )}`}
           alt="img-weather"

@@ -2,6 +2,7 @@ import getLocation from "./locationFunction";
 
 const getWeatherPicture = (weatherCode) => {
   const picture = {
+    100 :"image-loader.gif",
     0: "clear.svg",
     1: "cloudy.svg",
     2: "cloudy-2.svg",
@@ -66,7 +67,7 @@ const getWeather = async () => {
   } catch (error) {
     console.error("Error fetching weather data:", error.message);
     return {
-      weatherCode: [0, 0, 0, 0],
+      weatherCode: [100, 100, 100, 100],
       temperatureMax: [0, 0, 0, 0],
       temperatureMin: [0, 0, 0, 0],
     };

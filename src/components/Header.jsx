@@ -23,9 +23,10 @@ function Header() {
     return (
       <header>
         <div className="webName">
-          <div>
-            <img src="../images/weather_logo.png" alt="" />
-          </div>
+        <div>
+          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+            alt="logo-weather" />
+        </div>
           <div>
             <h1>Weather</h1>
           </div>
@@ -41,9 +42,10 @@ function Header() {
     return (
       <header>
         <div className="webName">
-          <div>
-            <img src="../images/weather_logo.png" alt="" />
-          </div>
+        <div>
+          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+            alt="logo-weather" />
+        </div>
           <div>
             <h1>Weather</h1>
           </div>
@@ -59,7 +61,8 @@ function Header() {
     <header>
       <div className="webName">
         <div>
-          <img src="../images/weather_logo.png" alt="" />
+          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+            alt="logo-weather" />
         </div>
         <div>
           <h1>Weather</h1>
