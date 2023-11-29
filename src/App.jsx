@@ -16,13 +16,18 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const weather = await getWeather();
-      console.log(weather);
-      setWeatherData(weather);
+      try {
+        const weather = await getWeather();
+        console.log(weather);
+        setWeatherData(weather);
+      } catch (error) {
+        console.error("Error fetching weather data:", error.message);
+        // Handle error
+      }
     };
-
+  
     fetchData();
-  }, []);
+  }, [isDaytime]);
 
   return (
     <div className={`app ${isDaytime ? "daytime" : "nighttime"}`}>

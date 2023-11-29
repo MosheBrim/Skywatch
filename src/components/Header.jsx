@@ -17,15 +17,42 @@ function Header() {
     };
 
     fetchData();
-  }, []); 
+  }, []);
 
   if (error) {
-    
-    return <div>Error fetching location: {error}</div>;
+    return (
+      <header>
+        <div className="webName">
+          <div>
+            <img src="../images/weather_logo.png" alt="" />
+          </div>
+          <div>
+            <h1>Local Weather</h1>
+          </div>
+        </div>
+        <div>
+          <h1>Error fetching location: {error}</h1>
+        </div>
+      </header>
+    );
   }
 
   if (!location) {
-    return <div>Loading...</div>;
+    return (
+      <header>
+        <div className="webName">
+          <div>
+            <img src="../images/weather_logo.png" alt="" />
+          </div>
+          <div>
+            <h1>Local Weather</h1>
+          </div>
+        </div>
+        <div>
+          <h1>Loading...</h1>
+        </div>
+      </header>
+    );
   }
 
   return (
@@ -38,7 +65,7 @@ function Header() {
           <h1>Local Weather</h1>
         </div>
       </div>
-      <div className="date">
+      <div>
         <h1>{location.countryCapital}</h1>
       </div>
     </header>

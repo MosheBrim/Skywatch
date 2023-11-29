@@ -10,15 +10,16 @@ const Today = (props) => {
   return (
     <div className="today">
       <div className="date">
-        <div>
+        <div className="day">
           <h4>{day}</h4>
         </div>
-        <div>
+        <div className="inner-date">
           <h4>{new Date().toLocaleDateString()}</h4>
         </div>
       </div>
-      <div>
+      <div className="image">
         <img
+        className="iag"
           src={`../icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
             weatherCode
           )}`}
@@ -26,7 +27,8 @@ const Today = (props) => {
         />
       </div>
       <div>
-        <h5>{`${temperatureMin}° / ${temperatureMax}°`}</h5>
+        <h5 className="temperature-min">{`${temperatureMin}°`}</h5>
+        <h5>{`${temperatureMax}°`}</h5>
       </div>
     </div>
   );
