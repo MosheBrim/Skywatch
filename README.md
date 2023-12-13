@@ -27,9 +27,6 @@ Check out the live demo on GitHub Pages: [Weather Website Demo](https://moshebri
 - Scroll down to view the 3-day weather forecast.
 - Enjoy the responsive design and day/night mode.
 
-## Contributing
-Contributions are welcome! If you find a bug or have a feature request, please open an issue.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
