@@ -99,7 +99,7 @@ h1{
   text-align: center;
   margin: 20px;
   width: 60%;
-  height: 220px;
+  height: 205px;
 }
 .next-days {
   display: flex;
@@ -134,7 +134,7 @@ flex-direction: column;
   /* text-align: center; */
   /* margin: 20px; */
   width: 60%;
-  height: 267px;
+  height: 255px;
 }
 
 .today {
