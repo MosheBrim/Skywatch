@@ -24,7 +24,7 @@ function Header() {
       <header>
         <div className="webName">
         <div>
-          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+          <img src={`${import.meta.env.BASE_URL}/public/images/weather_logo.png`}
             alt="logo-weather" />
         </div>
           <div>
@@ -43,7 +43,7 @@ function Header() {
       <header>
         <div className="webName">
         <div>
-          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+          <img src={`${import.meta.env.BASE_URL}/public/images/weather_logo.png`}
             alt="logo-weather" />
         </div>
           <div>
@@ -61,7 +61,7 @@ function Header() {
     <header>
       <div className="webName">
         <div>
-          <img src={`${import.meta.env.BASE_URL}/images/weather_logo.png`}
+          <img src={`${import.meta.env.BASE_URL}/public/images/weather_logo.png`}
             alt="logo-weather" />
         </div>
         <div>
