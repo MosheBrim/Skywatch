@@ -2,13 +2,13 @@ import getLocation from "./locationFunction";
 
 const getWeatherPicture = (weatherCode) => {
   const picture = {
-    10: "image-loader.gif",
+    10: "loader.gif",
     0: "clear.svg",
     1: "cloudy.svg",
     2: "cloudy-2.svg",
     3: "cloudy-3.svg",
-    45: "snowy.svg",
-    48: "snowy.svg",
+    45: "cloudy-3.svg",
+    48: "cloudy-3.svg",
     51: "rainy.svg",
     53: "rainy.svg",
     55: "rainy.svg",
@@ -58,6 +58,12 @@ const getWeather = async () => {
     const dataWeather = await responseWeather.json();
 
     const weather = {
+      realTemperature: dataWeather.current.temperature_2m,
+      relativeHumidity: dataWeather.current.relative_humidity_2m,
+      precipitation: dataWeather.current.precipitation,
+      rain: dataWeather.current.rain,
+      windSpeed: dataWeather.current.wind_speed_10m,
+      windDirection: dataWeather.current.wind_direction_10m,
       weatherCode: dataWeather.daily.weathercode,
       temperatureMax: dataWeather.daily.temperature_2m_max,
       temperatureMin: dataWeather.daily.temperature_2m_min,

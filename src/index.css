@@ -6,7 +6,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-color: #d2f3f9;
+  background: linear-gradient(0deg, rgba(255,254,230,1) 0%, rgba(183,244,255,1) 49%);
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
@@ -23,7 +23,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: #aeccd2;
+  background: linear-gradient(0deg, rgb(191, 191, 172) 0%, rgba(174,204,210,1) 70%);
   text-shadow: 2px 2px 4px #3b5b62;
   padding: 16px 32px;
   /* width: 100%; */
@@ -55,7 +55,7 @@ footer {
 }
 
 footer p {
-  color: #c9c7c7;
+  color: #b2b2b2;
 }
 /* .daytime {
   background-image: url('../public/images/day.jpg');
@@ -82,6 +82,14 @@ h5 {
   color: white;
   text-shadow: 1px 1px 1px #5c9fae;
   font-family: "Dancing Script", cursive;
+
+}
+h1{
+  color: white;
+  text-shadow: 1px 1px 1px #5c9fae;
+  font-family: "Dancing Script", cursive;
+  /* padding-right: 150px; */
+  /* padding: 20px; */
 }
 .container-next-days {
   display: flex;
@@ -89,9 +97,9 @@ h5 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 30px;
-  width: 800px;
-  height: 200px;
+  margin: 20px;
+  width: 60%;
+  height: 220px;
 }
 .next-days {
   display: flex;
@@ -99,11 +107,23 @@ h5 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 20px;
-  width: 240px;
-  height: 220px;
+  margin: 2.5%;
+  width: 30%;
+  padding: 5px;
+  height: 100%;
   border-radius: 10px;
-  background-color: #aeccd2;
+  background: linear-gradient(0deg, rgb(191, 191, 172) 0%, rgba(174,204,210,1) 70%);
+}
+.inner-inner-date{
+display: flex;
+text-align: left;
+flex-direction: column;
+}
+.temperature {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: flex-end;
+  flex-direction: row;
 }
 
 .container-today {
@@ -112,45 +132,52 @@ h5 {
   align-items: center;
   /* justify-content: center; */
   /* text-align: center; */
-  margin: 20px;
-  width: 70%;
-  height: 220px;
+  /* margin: 20px; */
+  width: 60%;
+  height: 267px;
 }
 
 .today {
-  
   border-radius: 10px;
-  background-color: #aeccd2;
-  width: 760px;
-  text-shadow: -1px -1px -1px #3b5b62;
-  /* padding:  20px; */
+  background: linear-gradient(0deg, rgb(191, 191, 172) 0%, rgba(174,204,210,1) 70%);
+  width: 95%;
 
-  height: 220px;
+  text-shadow: -1px -1px -1px #3b5b62;
+  margin: 20px 2.5%;
+  height: 100%;
 }
 .inner-today{
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   text-align: center;
-  margin: 10px;
   margin-top: 20px;
   height: 100%;
 }
+.today-date{
+  width: 30%;
+  margin: 0 15px;
+  height: 83%;
+}
 .img-today{
   height: 85%;
+  width: 60%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+}
+.img-today .image{
+  margin-right: 20px;
 }
 
 .date {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: self-start;
-  width: 210px;
+  justify-content: space-between;
+  width: 90%;
+}
+.inner-today .date{
+  width: 20%;
 }
 
 .day,
@@ -160,8 +187,14 @@ h5 {
 }
 
 .day h4,
-.inner-date h4 {
+.inner-date h4,
+h4
+{
   font-size: 1em;
+  text-align: left;
+}
+.weather-details h4{
+  padding: 4px 0;
 }
 
 
@@ -176,7 +209,7 @@ h5 {
   padding: 15px;
   margin: 5px 15px;
   margin-bottom: 10px;
-  background-color: #aeccd2;
+  background-color: rgb(211, 211, 192);
   border-radius: 50%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
@@ -185,12 +218,14 @@ h5 {
   height: 80px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
+.weather-details{
+  width: 25%;
+}
 .temperature-min {
-  /* display:inline-block; */
   color: rgba(255, 255, 255, 0.782);
 }
 h5 {
-  padding: 5px;
+  padding: 6px;
   display: inline;
 }
 span {
