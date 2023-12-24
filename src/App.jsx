@@ -5,57 +5,12 @@ import Footer from "./components/Footer";
 import Today from "./components/Today";
 import NextDays from "./components/NextDays";
 import { getDayOfWeek, getWeather } from "./functions/weatherFunctions";
+import { useLocation } from "./atoms/locationAtom"
 
-// // Function to get latitude and longitude for a given city
-// async function getCityCoordinates(city) {
-//   const apiKey = "815e3705c251499f9bc35f06177483e8";
-//   const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
-//     city
-//   )}&key=${apiKey}`;
-
-//   try {
-//     const response = await fetch(apiUrl);
-//     const data = await response.json();
-
-//     if (data.results && data.results.length > 0) {
-//       const firstResult = data.results[0];
-//       const { lat, lng } = firstResult.geometry;
-
-//       console.log(`Coordinates for ${city}: Latitude ${lat}, Longitude ${lng}`);
-//       return { lat, lng };
-//     } else {
-//       console.error(`No results found for ${city}`);
-//       return null;
-//     }
-//   } catch (error) {
-//     console.error("Error fetching coordinates:", error.message);
-//     return null;
-//   }
-// }
-
-// // Example usage:
 
 const App = () => {
-//   const data = {
-//     resource_id: "8f714b6f-c35c-4b40-a0e7-547b675eee0e", // the resource id
-//     limit: 100, // get 5 results
-//     q: "jones", // query for 'jones'
-//   };
 
-//   fetch("https://data.gov.il/api/3/action/datastore_search", {
-//     method: "GET",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     data: data,
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       alert("Total results found: " + data.result.total);
-//     })
-//     .catch((error) => {
-//       console.error("Error fetching data:", error);
-//     });
+  const [location] = useLocation();
   const [isDaytime] = useDayNight();
   const [weatherData, setWeatherData] = useState({
     weatherCode: [10, 10, 10, 10],
@@ -70,21 +25,20 @@ const App = () => {
   });
 
   useEffect(() => {
+    if (location.latitude !== 0 && location.longitude !== 0){
     const fetchData = async () => {
       try {
-        const weather = await getWeather();
+        console.log(location);
+        const weather = await getWeather(location.latitude, location.longitude);
         console.log(weather);
-        // const coordinates = await getCityCoordinates("Maale Amos");
-        // console.log(coordinates);
         setWeatherData(weather);
       } catch (error) {
         console.error("Error fetching weather data:", error.message);
-        // Handle error
       }
     };
 
     fetchData();
-  }, [isDaytime]);
+  }}, [isDaytime, location]);
 
   return (
     <div className={`app ${isDaytime ? "daytime" : "nighttime"}`}>
@@ -96,7 +50,7 @@ const App = () => {
             <Today
               realTemperature={weatherData.realTemperature}
               relativeHumidity={weatherData.relativeHumidity}
-              precipitation={weatherData.precipitation}
+              precipitation={weatherData.precipitation*100}
               rain={weatherData.rain}
               windSpeed={weatherData.windSpeed}
               windDirection={weatherData.windDirection}

@@ -49,11 +49,9 @@ const getDayOfWeek = (dayIndex) => {
   return days[dayIndex % 7];
 };
 
-const getWeather = async () => {
+const getWeather = async (latitude, longitude) => {
   try {
-    const location = await getLocation();
-    console.log(location);
-    const url = `https://api.open-meteo.com/v1/dwd-icon?latitude=${location.latitude}&longitude=${location.longitude}&current=temperature_2m,relative_humidity_2m,precipitation,rain,wind_speed_10m,wind_direction_10m&daily=weathercode,temperature_2m_max,temperature_2m_min&forecast_days=4`;
+    const url = `https://api.open-meteo.com/v1/dwd-icon?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,precipitation,rain,wind_speed_10m,wind_direction_10m&daily=weathercode,temperature_2m_max,temperature_2m_min&forecast_days=4`;
     const responseWeather = await fetch(url);
     const dataWeather = await responseWeather.json();
 
@@ -71,11 +69,6 @@ const getWeather = async () => {
     return weather;
   } catch (error) {
     console.error("Error fetching weather data:", error.message);
-    return {
-      weatherCode: [10, 10, 10, 10],
-      temperatureMax: [0, 0, 0, 0],
-      temperatureMin: [0, 0, 0, 0],
-    };
   }
 };
 
