@@ -79,7 +79,7 @@ const CityCoordinatesFinder = () => {
   const handleSuggestionClick = async (city, event) => {
     event.stopPropagation(); // Stop the click event from propagating
     city = city.split(",")[0];
-    setInput(city);
+    setInput("");
     setSuggestions([]);
 
     const cityCoordinates = await getCityCoordinates(city);

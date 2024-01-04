@@ -22,15 +22,25 @@ body {
   align-items: center;
   margin-top: 20px;
 }
+
+h1 {
+  color: white;
+  text-shadow: 1px 1px 1px #5c9fae;
+  font-family: "Dancing Script", cursive;
+  /* padding-right: 150px; */
+  /* padding: 20px; */
+}
+
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* background-color: rgb(191, 191, 172); */
   background: linear-gradient(
     0deg,
     rgb(191, 191, 172) 0%,
-    rgba(174, 204, 210, 1) 70%
+    rgb(162, 191, 197) 70%
   );
   text-shadow: 2px 2px 4px #3b5b62;
   padding: 16px 32px;
@@ -39,15 +49,15 @@ header {
 }
 
 header h1 {
-  color: #fff;
+  color: rgb(208, 228, 232);
   font-weight: bold;
-  font-family: "Caveat", cursive;
-  font-size: 2em;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif "Caveat", cursive;
 }
 header img {
   width: 55px;
   height: 55px;
-  padding-right: 20px;
+  padding: 0 10px;
+
 }
 .webName {
   display: flex;
@@ -91,13 +101,7 @@ h5 {
   text-shadow: 1px 1px 1px #5c9fae;
   font-family: "Dancing Script", cursive;
 }
-h1 {
-  color: white;
-  text-shadow: 1px 1px 1px #5c9fae;
-  font-family: "Dancing Script", cursive;
-  /* padding-right: 150px; */
-  /* padding: 20px; */
-}
+
 .container-next-days {
   display: flex;
   flex-direction: row;
@@ -340,4 +344,349 @@ span {
 
 .city-list li:last-child {
   border-bottom: none;
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    font-family: "Montserrat", sans-serif;
+  }
+  body {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 254, 230, 1) 0%,
+      rgba(183, 244, 255, 1) 49%
+    );
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  
+  .middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+      0deg,
+      rgb(191, 191, 172) 0%,
+      rgba(174, 204, 210, 1) 70%
+    );
+    text-shadow: 2px 2px 4px #3b5b62;
+    padding: 16px 32px;
+    /* width: 100%; */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.522);
+  }
+  
+  header h1 {
+    color: #fff;
+    font-weight: bold;
+    font-family: "Caveat", cursive;
+    font-size: 2em;
+  }
+  header img {
+    width: 55px;
+    height: 55px;
+    padding-right: 20px;
+  }
+  .webName {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+  }
+  
+  footer p {
+    color: #b2b2b2;
+  }
+  /* .daytime {
+    background-image: url('../public/images/day.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+  
+  .nighttime {
+    background-image: url('../public/images/night.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  } */
+  
+  h4,
+  h5 {
+    color: white;
+    text-shadow: 1px 1px 1px #5c9fae;
+    font-family: "Dancing Script", cursive;
+  }
+  h1 {
+    color: white;
+    text-shadow: 1px 1px 1px #5c9fae;
+    font-family: "Dancing Script", cursive;
+    /* padding-right: 150px; */
+    /* padding: 20px; */
+  }
+  .container-next-days {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    width: 60%;
+    height: 205px;
+  }
+  .next-days {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2.5%;
+    width: 30%;
+    padding: 5px;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(
+      0deg,
+      rgb(191, 191, 172) 0%,
+      rgba(174, 204, 210, 1) 70%
+    );
+  }
+  .inner-inner-date {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+  }
+  .temperature {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: flex-end;
+    flex-direction: row;
+  }
+  
+  .container-today {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* margin: 20px; */
+    width: 60%;
+    height: 255px;
+  }
+  
+  .today {
+    border-radius: 10px;
+    background: linear-gradient(
+      0deg,
+      rgb(191, 191, 172) 0%,
+      rgba(174, 204, 210, 1) 70%
+    );
+    width: 95%;
+  
+    text-shadow: -1px -1px -1px #3b5b62;
+    margin: 20px 2.5%;
+    height: 100%;
+  }
+  .inner-today {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 20px;
+    height: 100%;
+  }
+  .today-date {
+    width: 30%;
+    margin: 0 15px;
+    height: 83%;
+  }
+  .img-today {
+    height: 85%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .img-today .image {
+    margin-right: 20px;
+  }
+  
+  .date {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+  }
+  .inner-today .date {
+    width: 20%;
+  }
+  
+  .day,
+  .inner-date {
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .day h4,
+  .inner-date h4,
+  h4 {
+    font-size: 1em;
+    text-align: left;
+  }
+  .weather-details h4 {
+    padding: 4px 0;
+  }
+  
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+    margin: 5px 15px;
+    margin-bottom: 10px;
+    background-color: rgb(211, 211, 192);
+    border-radius: 50%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  .img {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  .weather-details {
+    width: 25%;
+  }
+  .temperature-min {
+    color: rgba(255, 255, 255, 0.782);
+  }
+  h5 {
+    padding: 6px;
+    display: inline;
+  }
+  span {
+    background-color: rgb(75, 71, 104);
+    height: 20px;
+    width: 2px;
+    border-radius: 50%;
+  }
+  .city-input-container {
+    height: 35px;
+    position: relative;
+    border: none;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgb(191, 191, 172);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon-container {
+    margin-right: 12px;
+  
+  
+  
+  
+  }
+  .city-input-container.typing{
+    background-color: rgb(174, 204, 210);
+  
+  }
+  
+  .city-input-container input:focus {
+    outline: none;
+    font-family: "Dancing Script", cursive;
+    color: white;
+    background-color: rgb(174, 204, 210);
+    width: 163px;
+  
+  }
+  
+  .city-label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    font-family: "Dancing Script", cursive;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.633);
+    text-shadow: none;
+    transition: all 0.3s;
+    z-index: 2;
+  }
+  
+  .city-label.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  
+  .city-input-container input {
+    padding-left: 10px;
+    z-index: 1;
+    background-color: rgb(191, 191, 172);  
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    width: 163px;
+    color: white;
+    font-family: "Dancing Script", cursive;
+    font-size:medium;
+  
+  }
+  
+  .city-list {
+    margin-top: 2px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(174, 204, 210);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    list-style: none;
+    padding: 0;
+    color: white;
+    font-family: "Dancing Script", cursive;text-shadow: none;
+    font-size: small;
+    border-radius: 5px;
+  }
+  
+  .city-list li {
+    padding: 8px;
+    border-bottom: 2px solid rgb(191, 191, 172);
+    cursor: pointer;
+  }
+  
+  .city-list li:hover {
+    background-color: rgb(191, 191, 172);  
+  }
+  
+  .city-list li:last-child {
+    border-bottom: none;
+  }
 }
