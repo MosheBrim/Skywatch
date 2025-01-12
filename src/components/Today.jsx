@@ -2,13 +2,7 @@ import React from "react";
 import { useDayNight } from "../atoms/dayNightAtom";
 import { getWeatherPicture } from "../functions/weatherFunctions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faArrowUp,
-  faTint,
-  faCloudRain,
-  faWind,
-  faTintSlash,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCloudRain, faWind } from "@fortawesome/free-solid-svg-icons";
 
 const Today = (props) => {
   const [isDaytime] = useDayNight();
@@ -21,9 +15,7 @@ const Today = (props) => {
     realTemperature,
     relativeHumidity,
     precipitation,
-    rain,
     windSpeed,
-    windDirection,
   } = props;
 
   return (

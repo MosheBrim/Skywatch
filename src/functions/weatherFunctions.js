@@ -32,7 +32,7 @@ const getWeatherPicture = (weatherCode) => {
     96: "stormy.svg",
     99: "stormy.svg",
   };
-  return picture[weatherCode] || "image-loader.gif";
+  return picture[weatherCode] || "loader.gif";
 };
 
 const getDayOfWeek = (dayIndex) => {
