@@ -6,14 +6,16 @@ function Header() {
   const [location] = useLocation();
   const [error, setError] = useState(null);
 
+  const logoPath = `/Images/WeatherLogo.png`;
+
   if (!location) {
     return (
       <header>
         <div className="webName">
           <div>
             <img
-            src={`${import.meta.env.BASE_URL}/Images/WeatherLogo.png`}
-            alt="logo-weather"
+              src={logoPath}
+              alt="logo-weather"
             />
           </div>
           <div>
@@ -41,13 +43,13 @@ function Header() {
               backdropFilter: "blur(20px)",
               borderRadius: "5px",
             }}
-            src={`${import.meta.env.BASE_URL}/Images/WeatherLogo.png`}
+            src={logoPath}
             alt="logo-weather"
           />
         </div>
       </div>
       <div>
-        <h1 style={{fontSize:"40px"}}>{location.city}</h1>
+        <h1 style={{ fontSize: "40px" }}>{location.city}</h1>
       </div>
       <div>
         <CityCoordinatesFinder />

@@ -4,6 +4,11 @@ import { getWeatherPicture } from "../functions/weatherFunctions";
 
 const NextDays = (props) => {
   const [isDaytime] = useDayNight();
+  
+  const weatherIconPath = `/icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
+    props.weatherCode
+  )}`;
+
   return (
     <div className="next-days">
       <div className="date">
@@ -16,10 +21,8 @@ const NextDays = (props) => {
       </div>
       <div className="image">
         <img
-        className="iag"
-          src={`${import.meta.env.BASE_URL}/icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
-            props.weatherCode
-          )}`}
+          className="iag"
+          src={weatherIconPath}
           alt="img-weather"
         />
       </div>

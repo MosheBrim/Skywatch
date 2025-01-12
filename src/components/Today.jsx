@@ -53,9 +53,9 @@ const Today = (props) => {
           <div className="image">
             <img
               className="iag"
-              src={`${import.meta.env.BASE_URL}/icons/${
-                isDaytime ? "" : "night-"
-              }${getWeatherPicture(weatherCode)}`}
+              src={`/icons/${isDaytime ? "" : "night-"}${getWeatherPicture(
+                weatherCode
+              )}`}
               alt="img-weather"
             />
           </div>
