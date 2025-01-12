@@ -1,9 +1,9 @@
-# Weather Website
+# SkyWatch
 
-Welcome to the Weather Website! This web application provides you with local weather information, including the current weather and a 3-day forecast.
+Welcome to SkyWatch! This web application provides you with local weather information, including the current weather and a 3-day forecast.
 
 ## Live Demo
-Check out the live demo on GitHub Pages: [Weather Website Demo](https://moshebrim.github.io/Weather-Website/)
+Check out the live demo on Vercel: [SkyWatch Live Demo](https://skywatch-101.vercel.app/)
 
 ## Features
 - **Current Weather:** Display the current weather conditions.
@@ -11,15 +11,28 @@ Check out the live demo on GitHub Pages: [Weather Website Demo](https://moshebri
 - **Day/Night Mode:** The website adjusts its theme based on the time of day.
 
 ## Technologies Used
-- React: JavaScript library for building user interfaces.
-- Open-Meteo API: Used to fetch weather data.
-- Vite: Fast, opinionated web dev build tool.
+- **React:** JavaScript library for building user interfaces.
+- **Open-Meteo API:** Used to fetch weather data.
+- **Vite:** Fast, opinionated web dev build tool.
+- **Vercel:** Deployment platform for hosting the application.
 
 ## Getting Started
-1. Clone the repository: `git clone https://github.com/moshebrim/Weather-Website.git`
-2. Navigate to the project directory: `cd Weather-Website`
-3. Install dependencies: `npm install`
-4. Run the application: `npm run dev`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/moshebrim/SkyWatch.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd SkyWatch
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Run the application:
+   ```bash
+   npm run dev
+   ```
 
 ## How to Use
 - Open the application in your web browser.
