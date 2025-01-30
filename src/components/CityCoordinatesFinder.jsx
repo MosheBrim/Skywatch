@@ -139,9 +139,7 @@ const CityCoordinatesFinder = () => {
       if (data.results && data.results.length > 0) {
         const firstResult = data.results[0];
         const { lat, lng } = firstResult.geometry;
-        console.log(
-          `Coordinates for ${city}: Latitude ${lat}, Longitude ${lng}`
-        );
+
         return {
           latitude: lat,
           longitude: lng,

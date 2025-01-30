@@ -28,9 +28,7 @@ const App = () => {
     if (location.latitude !== 0 && location.longitude !== 0){
     const fetchData = async () => {
       try {
-        console.log(location);
         const weather = await getWeather(location.latitude, location.longitude);
-        console.log(weather);
         setWeatherData(weather);
       } catch (error) {
         console.error("Error fetching weather data:", error.message);
