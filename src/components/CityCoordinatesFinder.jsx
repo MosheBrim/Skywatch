@@ -21,7 +21,7 @@ const CityCoordinatesFinder = () => {
     }
 
     const fetchCitySuggestions = async () => {
-      const apiKey = "815e3705c251499f9bc35f06177483e8";
+      const apiKey = import.meta.env.VITE_OPEN_CAGE_API_KEY;
       const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
         input
       )}&key=${apiKey}`;
@@ -127,7 +127,7 @@ const CityCoordinatesFinder = () => {
   };
 
   const getCityCoordinates = async (city) => {
-    const apiKey = "815e3705c251499f9bc35f06177483e8";
+    const apiKey = import.meta.env.VITE_OPEN_CAGE_API_KEY;
     const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${encodeURIComponent(
       city
     )}&key=${apiKey}`;
